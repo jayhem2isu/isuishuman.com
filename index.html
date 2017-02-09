@@ -1,0 +1,66 @@
+<! doctype html>
+<html>
+
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <script src="packery.pkgd.js"></script>
+        <script src="jquery-3.1.1.js"></script>
+    </head>
+    
+    <body>
+        <div class="body">
+            <div class="col-md-6 col-sm-6 me">
+                <h3 class="hi">Hi, I am <span>Isu</span> and I am human.<br><br>I am 19 years of age<br>I am a <span>Web Designer</span></h3>
+                
+            </div>
+        
+            <div class="col-md-6 col-sm-6 more">
+                <div class="grid col-md-12" data-packery='{ "itemSelector": ".grid-item"}'>
+                    <div class="grid-item write"><h3 class="show">I Write</h3><p id="write-more">I write fictional stories and non-fiction articles. Check out my <span>Medium</span> and <span>Wordpress</span></p></div>
+                    <div class="grid-item"><h3 class="show">I Code</h3><p id="code-more">I like to call myself a frontend developer. I put stuff on <span>Gitlab</span> occasionally</p></div>
+                    <div class="grid-item"><h3 class="show">I Live</h3><p id="live-more">I <span>tweet</span> every now and again and take <span>pictures</span> too.</p></div>
+                    <div class="grid-item"><h3 class="show">I Like</h3><p id="like-more">I love <span>music</span> and art and everything nice.</p></div>
+                    <div class="grid-item"><h3 class="show">I Learn</h3><p id="learn-more">I am very keen on learning new things all the time</p></div>
+                    <div class="grid-item"><h3 class="show">I Am Available</h3><p id="contact">I freenlance as a writer and web designer <span>Contact Me</span></p></div>
+                </div>
+            
+            </div>
+        
+        
+        
+        </div>
+
+        
+        
+        <script>
+            var grid = document.querySelector('.grid');
+
+            var pckry = new Packery( grid, {
+                itemSelector: '.grid-item'
+            });
+
+            grid.addEventListener( 'click', function( event ) {
+        // filter for grid-item clicks
+        if ( !event.target.classList.contains('grid-item') ) {
+        return;
+        }
+        event.target.classList.toggle('grid-item--large');
+                pckry.shiftLayout();
+            });
+
+        </script>
+        
+        <script>
+            function toggle_visibility(id) {
+            var e = document.getElementById(id);
+            if(e.style.display == 'none')
+            e.style.display = 'block';
+                else
+            e.style.display = 'none';
+        </script>
+    </body>
+<!--    <a href="#" onclick="toggle_visibility('write-more');">-->
+<!--    -->
+</html>

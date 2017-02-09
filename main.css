@@ -1,0 +1,106 @@
+
+body{
+    font-family: sans-serif;
+    font-size: 100%;
+}
+.body{
+    position:absolute;
+    background-color: black;
+    height:96%;
+    width:98%;
+    left: 1%;
+    top:2%;
+}
+/* ---- grid ---- */
+.more{
+    position:relative;
+    height:100%;
+}
+.grid {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background: black;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-item {
+    position:relative;
+    width:200px;
+    height: 200px;
+    background: black;
+    border: 2px solid white;
+}
+
+.grid-item:hover {
+  background: #C90;
+  cursor: pointer;
+    
+}
+
+
+.grid-item--large {
+  width: 300px;
+  height: 300px;
+  z-index: 2;
+}
+.grid-item--large #write-more{
+    display:block;
+}
+.grid-item--large #code-more{
+    display:block;
+}
+.grid-item--large #live-more{
+    display:block;
+}
+.grid-item--large #like-more{
+    display:block;
+}
+.grid-item--large #learn-more{
+    display:block;
+}
+.grid-item--large #contact{
+    display:block;
+}
+.me{
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)),
+       url('img.jpg') ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height:100%;
+}
+.hi{
+    color:white;
+    position:relative;
+    top: 35%;
+    font-size: 2.2em;
+    font-family: cursive;
+}
+span{
+    color:yellow;
+}
+.show{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:deepskyblue;
+}
+#write-more, #code-more, #live-more, #like-more, #learn-more, #contact{
+    display: none;
+    color:white;
+    position:relative;
+    top:70%;
+    text-align:center;
+    font-size: 1.3em;
+}
