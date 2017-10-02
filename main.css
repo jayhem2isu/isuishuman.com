@@ -15,13 +15,14 @@ body{
 .more{
     position:relative;
     height:100%;
+    background: black;
 }
 .grid {
     position:absolute;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    background: black;
+    
 }
 
 /* clear fix */
@@ -103,4 +104,92 @@ span{
     top:70%;
     text-align:center;
     font-size: 1.3em;
+}
+@media (min-width:351px) and (max-width: 699px){
+    .body{
+        position:left;
+        top:0;
+        left:1%;
+        width:98%;
+    }
+    
+    .grid-item {
+        position:relative;
+        width:150px;
+        height: 150px;
+        background: black;
+        border: 2px solid white;
+    }
+    .grid-item--large {
+        width: 200px;
+        height: 200px;
+        z-index: 2;
+      }
+      #write-more, #code-more, #live-more, #like-more, #learn-more, #contact{
+        display: none;
+        color:white;
+        position:relative;
+        top:70%;
+        text-align:center;
+        font-size: 0.9em;
+    }
+}
+
+@media (min-width:700px) and (max-width:1284px) {
+    .grid-item {
+        position:relative;
+        width:150px;
+        height: 150px;
+        background: black;
+        border: 2px solid white;
+    }
+    .grid-item--large {
+        width: 200px;
+        height: 200px;
+        z-index: 2;
+      }
+      #write-more, #code-more, #live-more, #like-more, #learn-more, #contact{
+        display: none;
+        color:white;
+        position:relative;
+        top:70%;
+        text-align:center;
+        font-size: 0.9em;
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    .body{
+        position:left;
+        top:0;
+        left:1%;
+        width:98%;
+    }
+    
+    .grid-item {
+        position:relative;
+        width:100px;
+        height: 100px;
+        background: black;
+        border: 2px solid white;
+    }
+    .grid-item--large {
+        width: 150px;
+        height: 150px;
+        z-index: 2;
+      }
+      #write-more, #code-more, #live-more, #like-more, #learn-more, #contact{
+        display: none;
+        color:white;
+        position:relative;
+        top:75%;
+        text-align:center;
+        font-size: 0.8em;
+    }
+    .show{
+        font-size:1.2em;
+
+
+    }
 }
